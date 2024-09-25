@@ -1,0 +1,18 @@
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+        ddl-auto: create-drop
+  datasource:
+    platform: postgres
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://192.168.3.110:5432/crm
+    driverClassName: org.postgresql.Driver
+  batch:
+    jdbc:
+      initialize-schema: always
+
+logging:
+  pattern:
+    console: '[%-5level][%d{HH:mm:ss.SSS}][%thread][%class{0}][%X{correlationId}] - %msg%n'
